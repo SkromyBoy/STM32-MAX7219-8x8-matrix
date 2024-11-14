@@ -132,7 +132,52 @@ void MAX_RTtick(void);                        // постоянная работ
 ## Пример
 
 ```c
- /* USER CODE BEGIN 2 */
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include "MAX7219_Matrix.h"
+#include "MAX_Icons.h"
+/* USER CODE END Includes */
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_SPI1_Init(void);
+/* Private user code ---------------------------------------------------------*/
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
+int main(void)
+{
+  /* USER CODE BEGIN 1 */
+
+  /* USER CODE END 1 */
+
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_SPI1_Init();
+  /* USER CODE BEGIN 2 */
 	MAX_init(3, 1);
 	MAX_set_bright(5);
 	MAX_setRotation(3);
@@ -172,7 +217,7 @@ void MAX_RTtick(void);                        // постоянная работ
 	MAX_update();
 
 	MAX_setTextBound(0, 13);
-	MAX_RTsetText("Никогда не сдавайся и у тебя все получится!");
+	MAX_RTsetText("Hello World! - Привет мир!");
 	MAX_RTsetSpeed(15);
 	MAX_RTstart();
 
@@ -186,6 +231,8 @@ void MAX_RTtick(void);                        // постоянная работ
 
     /* USER CODE BEGIN 3 */
 	}
+  /* USER CODE END 3 */
+}
 ```
 
 <a id="versions"></a>
