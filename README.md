@@ -60,11 +60,13 @@ extern SPI_HandleTypeDef hspi1;
 
 ```c
 /* USER CODE BEGIN 2 */
+
 MAX_init(3, 1);                  //Инициализация дисплея;
 MAX_set_bright(5);               //Установка яркости;
 MAX_setRotation(3);              //Поворот матрицы (8x8): 0, 1, 2, 3 на 90 град по часовой стрелке;
 MAX_setType(0);                  //Установка типа дисплея: построчный последовательный (GM_SERIES) или зигзаг GM_ZIGZAG
 MAX_setConnection(0);            //Ориентация (точка подключения дисплея)
+
 /* USER CODE END 2 */
 ```
 
