@@ -129,8 +129,6 @@ void MAX_RTtick(void);                        // постоянная работ
 
 ## Пример
 
-Остальные примеры смотри в **examples**!
-
 ```c
  /* USER CODE BEGIN 2 */
 	MAX_init(3, 1);
