@@ -137,7 +137,7 @@ void MAX_setFlip(uint8_t x, uint8_t y);
 void MAX_setType(bool type);
 
 /*------------ Функция: MAX_setConnection ------------*/
-// ориентация (точка подключения дисплея)
+//Ориентация (точка подключения дисплея)
 //где conn - ориентация
 void MAX_setConnection(uint8_t conn);
 
